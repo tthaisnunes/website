@@ -1,0 +1,10 @@
+.container {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  min-height: calc(100vh);
+  scroll-snap-align: start;
+}

@@ -13,5 +13,15 @@ $font-family: 'Open Sans', sans-serif;
 $light: 300;
 $medium: 400;
 $semi-bold: 500;
-$bold: 600;
+$bold: 700;
 
+// paddings and margins
+$side-padding:2em;
+
+//media queries
+$mobile-breakpoint-sm: 480px;
+$mobile-breakpoint-md: 768px;
+$tablet-breakpoint: 1024px;
+$sm-breakpoint: 1280px;
+$md-breakpoint: 1366px;
+$lg-breakpoint: 1920px;

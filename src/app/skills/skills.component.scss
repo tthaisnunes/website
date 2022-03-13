@@ -36,8 +36,21 @@
 }
 
 .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-direction: column;
+
+  @media (min-width: $mobile-breakpoint-md) {
+    flex-direction: row;
+  }
+
   .chart-line {
-    width: 50%;
+    width: 100%;
     display: inline-block;
+
+    @media (min-width: $mobile-breakpoint-md) {
+      width: 48%;
+    }
   }
 }

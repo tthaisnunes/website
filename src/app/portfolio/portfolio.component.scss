@@ -1,6 +1,61 @@
-@import '../../assets/scss/variables.scss';
+@import "../../assets/scss/variables.scss";
 
 .content {
   background-color: $dark-blue;
-  height: 100vh;
+  padding: $side-padding;
+  box-shadow: $inner-shadow;
+}
+
+.inside-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $sm-breakpoint) {
+    width: 20%;
+    height: 100%;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: $light;
+    color: $white;
+    text-transform: uppercase;
+
+    @media (min-width: $mobile-breakpoint-md) {
+      font-size: 2.81rem;
+    }
+
+    @media (min-width: $sm-breakpoint) {
+      font-size: 4rem;
+      transform: rotate(-90deg);
+      position: absolute;
+      top: 45%;
+      right: -50%;
+    }
+
+    span {
+      font-weight: $semi-bold;
+      margin-left: 2rem;
+      display: block;
+
+      @media (min-width: $mobile-breakpoint-md) {
+        margin-left: 5rem;
+      }
+    }
+  }
+}
+
+.projects {
+  .projects__item {
+    width: 30%;
+    background: red;
+  }
 }

@@ -3,9 +3,12 @@
 .content {
   background: url("../../assets/images/banner.jpg") center bottom $secondary;
   background-size: cover;
-  height: 100vh;
   padding: $side-padding;
+}
+
+.inside-container {
   display: grid;
+  height: 100vh;
 }
 
 .content__header {
@@ -17,10 +20,10 @@
 
   h2 {
     color: $white;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: $medium;
     @media (min-width: $mobile-breakpoint-md) {
-      font-size: 36px;
+      font-size: 2.25rem;
     }
 
     &::after {
@@ -37,11 +40,11 @@
     background: $primary-gradient;
     box-shadow: 0px 10px 44px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    color: #fff;
-    border-radius: 5px;
+    color: $white;
+    border-radius: 0.31rem;
     border: none;
     padding: 0.5em 1rem;
-    font-size: 14px;
+    font-size: 0.87rem;
     font-weight: $bold;
     text-transform: uppercase;
 
@@ -75,11 +78,11 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    width: 20px;
+    width: 1.25rem;
   }
 
   li {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: $white;
     cursor: pointer;
     transform: rotate(-90deg);
@@ -92,15 +95,15 @@
     &:after {
       content: "";
       width: 0;
-      height: 2px;
+      height: 0.12rem;
       background: $primary;
       display: block;
-      border-radius: 10px;
+      border-radius: 0.62rem;
       transition: 0.3s;
     }
 
     &:hover::after {
-      width: 50px;
+      width: 3.12rem;
     }
   }
 }
@@ -114,14 +117,14 @@
   }
 
   p {
-    font-size: 48px;
-    line-height: 1.4;
+    font-size: 3rem;
     font-weight: $bold;
+    line-height: 1.4;
     text-transform: uppercase;
     color: $white;
 
     @media (min-width: $mobile-breakpoint-md) {
-      font-size: 90px;
+      font-size: 5.62rem;
     }
   }
 }
@@ -129,6 +132,6 @@
 .scroll-btn {
   grid-column: 1 / span 2;
   grid-row: 3;
-  height: 60px;
+  height: 3.75rem;
   align-self: flex-end;
 }

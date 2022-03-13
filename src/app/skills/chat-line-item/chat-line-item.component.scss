@@ -1,0 +1,57 @@
+@import "../../../assets/scss/variables.scss";
+
+.item__name {
+  color: $white;
+  font-size: 1rem;
+  font-weight: $light;
+  margin: 2rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.chart-line__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item__bar {
+  display: flex;
+  align-items: center;
+  width: 60%;
+
+  &.fill-20 {
+    span:nth-child(n):nth-child(-n + 12) {
+      background-color: $primary;
+    }
+  }
+  &.fill-40 {
+    span:nth-child(n):nth-child(-n + 24) {
+      background-color: $primary;
+    }
+  }
+  &.fill-60 {
+    span:nth-child(n):nth-child(-n + 36) {
+      background-color: $primary;
+    }
+  }
+  &.fill-80 {
+    span:nth-child(n):nth-child(-n + 48) {
+      background-color: $primary;
+    }
+  }
+  &.fill-100 {
+    span:nth-child(n):nth-child(-n + 60) {
+      background-color: $primary;
+    }
+  }
+
+  span {
+    width: 0.62rem;
+    height: 0.62rem;
+    background-color: $dark-grey;
+    display: inline-block;
+    margin-right: 1%;
+    border-radius: 50%;
+  }
+}

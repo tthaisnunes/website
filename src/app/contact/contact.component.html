@@ -12,49 +12,127 @@
 
       <div class="social__item">
         <label>E-mail</label>
-        <a href="mailto:hello@thaisnsouza.com.br?subject=Website contact" target="blank">hello@thaisnsouza.com.br</a>
+        <a
+          href="mailto:hello@thaisnsouza.com.br?subject=Website contact"
+          target="blank"
+          >hello@thaisnsouza.com.br</a
+        >
       </div>
 
       <div class="social__item">
         <label>linkedin</label>
-        <a href="https://www.linkedin.com/in/tthaisnunes" target="blank">linkedin.com/in/tthaisnunes</a>
+        <a href="https://www.linkedin.com/in/tthaisnunes" target="blank"
+          >linkedin.com/in/tthaisnunes</a
+        >
       </div>
 
       <div class="social__icons">
         <a href="https://medium.com/@tthaisnunes" target="blank">
-          <img src="../../assets/images/medium.svg" alt="medium logo icon">
+          <img src="../../assets/images/medium.svg" alt="medium logo icon" />
         </a>
 
         <a href="https://github.com/tthaisnunes" target="blank">
-          <img src="../../assets/images/github.svg" alt="github logo icon">
+          <img src="../../assets/images/github.svg" alt="github logo icon" />
         </a>
 
         <a href="https://www.behance.net/tthaisnunes" target="blank">
-          <img src="../../assets/images/behance.svg" alt="behance logo icon">
+          <img src="../../assets/images/behance.svg" alt="behance logo icon" />
         </a>
 
         <a href="https://www.linkedin.com/in/tthaisnunes" target="blank">
-          <img src="../../assets/images/linkedin.svg" alt="linkedin logo icon">
+          <img
+            src="../../assets/images/linkedin.svg"
+            alt="linkedin logo icon"
+          />
         </a>
 
-        <a href="https://pt.stackoverflow.com/users/6481/tthaisnunes?tab=profile" target="blank">
-          <img src="../../assets/images/stackoverflow.svg" alt="medium logo icon">
+        <a
+          href="https://pt.stackoverflow.com/users/6481/tthaisnunes?tab=profile"
+          target="blank"
+        >
+          <img
+            src="../../assets/images/stackoverflow.svg"
+            alt="medium logo icon"
+          />
         </a>
 
         <a href="https://twitter.com/_tthaisnunes" target="blank">
-          <img src="../../assets/images/twitter.svg" alt="twitter logo icon">
+          <img src="../../assets/images/twitter.svg" alt="twitter logo icon" />
         </a>
       </div>
-
     </div>
 
     <div class="form">
-      <form>
-        <input type="email" placeholder="email" required name="email" class="form__field">
-        <input type="text" placeholder="subject" name="subject" class="form__field">
-        <textarea name="message" cols="30" rows="10" placeholder="message" required class="form__field"></textarea>
+      <form [formGroup]="contactForm" (submit)="sendForm($event)">
+        <input
+          formControlName="email"
+          type="email"
+          placeholder="email*"
+          required
+          name="email"
+          class="form__field"
+        />
+        <div
+          *ngIf="
+            contactForm.controls['email'].invalid &&
+            (contactForm.controls['email'].dirty ||
+              contactForm.controls['email'].touched)
+          "
+        >
+          <span
+            class="form__field-error"
+            *ngIf="contactForm.controls['email'].errors?.['required']"
+          >
+            Email is required
+          </span>
+          <span
+            class="form__field-error"
+            *ngIf="contactForm.controls['email'].errors?.['email']"
+          >
+            Please enter a valid email
+          </span>
+        </div>
 
-        <button class="form__button">send</button>
+        <input
+          formControlName="subject"
+          type="text"
+          placeholder="subject"
+          name="subject"
+          class="form__field"
+        />
+
+        <textarea
+          formControlName="message"
+          name="message"
+          cols="30"
+          rows="10"
+          placeholder="message*"
+          required
+          class="form__field"
+        >
+        </textarea>
+        <div
+          *ngIf="
+            contactForm.controls['message'].invalid &&
+            (contactForm.controls['message'].dirty ||
+              contactForm.controls['message'].touched)
+          "
+        >
+          <span
+            class="form__field-error"
+            *ngIf="contactForm.controls['message'].errors?.['required']"
+          >
+            Message is required
+          </span>
+        </div>
+
+        <button
+          class="form__button"
+          type="submit"
+          [disabled]="!contactForm.valid"
+        >
+          send
+        </button>
       </form>
     </div>
   </div>

@@ -62,6 +62,19 @@
       }
     }
   }
+
+  .content__link-mobile {
+    @media (min-width: $mobile-breakpoint-md) {
+      display: none;
+    }
+  }
+
+  .content__link-desktop {
+    @media (min-width: $mobile-breakpoint-md) {
+      display: inline;
+      text-decoration: none;
+    }
+  }
 }
 
 .content__nav {

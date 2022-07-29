@@ -76,8 +76,38 @@
     width: 100%;
     height: 50vh;
     cursor: pointer;
-
+    
     background: $dark-grey;
+
+    &.medium {
+      background: url('../../assets/images/projects/medium.jpg') center center no-repeat #000; 
+      background-size: 60%;
+    }
+
+    &.data-health {
+      background: url('../../assets/images/projects/data-health.png') center center no-repeat #fff;
+      background-size: 60%;
+    }
+
+    &.pokemon {
+      background: url('../../assets/images/projects/pokemon.png') center center no-repeat #009dff;
+      background-size: 60%;
+    }
+
+    &.github {
+      background: url('../../assets/images/projects/github.png') center center no-repeat #fff;
+      background-size: 60%;
+    }
+
+    &.casa {
+      background: url('../../assets/images/projects/casa.svg') center center no-repeat #4657AA;
+      background-size: 60%;
+    }
+
+    &.ignite-lab {
+      background: url('../../assets/images/projects/ignite-lab.svg') center center no-repeat #121214;
+      background-size: 60%;
+    }
   }
 }
 
